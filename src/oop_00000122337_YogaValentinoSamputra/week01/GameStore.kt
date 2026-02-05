@@ -1,9 +1,10 @@
 package oop_00000122337_YogaValentinoSamputra.week01
 
 fun main(){
-        val gameString = "GTA V"
+        val gameTitle = "GTA V"
         val price = 200000
 
+        printRecipt(title = gameTitle, price = price, finalPrice = calculateDiscount(price))
 }
 
 fun calculateDiscount (price: Int): Int{
@@ -16,6 +17,6 @@ fun calculateDiscount (price: Int): Int{
     return discountPrice;
 }
 
-fun printRecipt (title: String, finalPrice: Int){
-
+fun printRecipt (title: String,  price: Int, finalPrice: Int){
+    print("gameTitle: $title, harga sebelum diskon: $price finalPrice: $finalPrice")
 }
