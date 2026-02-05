@@ -9,6 +9,11 @@ fun main ( ) {
     println("Radius: $radius, Area: $area")
 
     println("${checkSize(area)}")
+
+    var b : String? = "ABC"
+    b = null
+
+    println(b)
 }
 
 fun checkSize(area: Double) = if(area > 100) "This is a Big Circle" else "This is a Small Circle"
