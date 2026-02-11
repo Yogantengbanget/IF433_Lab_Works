@@ -24,4 +24,21 @@ fun main() {
         val s1 = Student(name, nim, gpa = 0.0 ,major)
         println("Status: Pendaftaran Selesai.")
     }
+
+    print("Pilih Jalur(1. Reguler, 2. Umum): ")
+    val type = scanner.nextInt()
+    scanner.nextLine()
+
+    if (type == 1) {
+        print("Masukkan Jurusan: ")
+        val major = scanner.nextLine()
+
+        val s1 = Student(name, nim, gpa = 0.0, major)
+        println ("Terdaftar di: ${s1.major} dengan GPA awal ${s1.gpa}")
+    }else if (type == 2){
+        val s2 = Student(name, nim, gpa = 0.0)
+        println("Terdaftar di: ${s2.major}  dengan GPA awal ${s2.gpa}")
+    }else {
+        println("Pilihan ngawur, pendaftaran batal!")
+    }
 }
