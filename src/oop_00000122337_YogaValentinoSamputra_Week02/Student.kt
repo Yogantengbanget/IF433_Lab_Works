@@ -1,8 +1,6 @@
 package oop_00000122337_YogaValentinoSamputra_Week02
 
-import java.util.Scanner
-
-class Student (val name: String, val nim: String, val major : String){
+class Student (val name: String, val nim: String, var gpa: Double = 0.0, var major : String){
     init {
         if (nim.length != 5) {
             println("WARNING: Objek tercipta dengan NIM ($nim) yang tidak valid!" );
@@ -11,7 +9,7 @@ class Student (val name: String, val nim: String, val major : String){
             print("LOG: Objek Student $name berhasil dialokasikan di Memory")
         }
     }
-    constructor(name: String, nim: String) : this (name, nim, major="Non-Matriculated"){
+    constructor(name: String, nim: String, gpa: Double) : this (name, nim, gpa, major="Non-Matriculated"){
         println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan).")
     }
 }
