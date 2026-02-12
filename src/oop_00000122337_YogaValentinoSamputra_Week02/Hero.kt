@@ -71,6 +71,8 @@ fun main () {
         println("${hero.name} MENANG!")
     }else if (hero.hp <= 0){
         println("${hero.name} KALAH!")
+    }else if (hero.hp <= enemyHp) {
+        println("${enemyName} MENANG!")
     }else {
         println("pertarungan dihentikan")
     }
