@@ -1,13 +1,10 @@
 package oop_00000122337_YogaValentinoSamputra_Week03
 
 fun main() {
-    val e = Employee("Budi")
+    val w = Weapon("Pisau")
 
-    e.salary = 5000000
-    println("Gaji: ${e.salary}")
+    w.damage = -50
+    w.damage = 9999
 
-    e.increasesPerformance()
-
-
-    println("Pajak yang harus dibayar: ${e.tax}")
+    println("${w.tier}")
 }
