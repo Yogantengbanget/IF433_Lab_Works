@@ -9,7 +9,6 @@ fun main() {
 
     println("${w.tier}")
 
-    println(p.xp)
 
     p.addXp(50);
     p.addXp(60);
