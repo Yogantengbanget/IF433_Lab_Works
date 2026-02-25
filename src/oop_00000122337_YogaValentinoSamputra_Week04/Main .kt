@@ -17,4 +17,14 @@ fun main () {
     eCar.accelerate()
     eCar.honk()
     eCar.openTrunk()
+
+    println("--- Testing Manager ---")
+    val mngr = Manager("Yanto", 10000000)
+    mngr.work()
+    println("Bonusnya adalah ${mngr.calculateBonus()}")
+
+    println("--- Testing Developer ---")
+    val dvlp= Developer("Andi", 20000000, "C")
+    dvlp.work()
+    println("Bonusnya adalah ${dvlp.calculateBonus()}")
 }
