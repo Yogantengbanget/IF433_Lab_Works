@@ -48,7 +48,7 @@ fun main(){
         if (payment is EWallet) {
             println("Saldo kurang. Melakukan top up otomatis...")
             payment.topUp(50000.0)
-            payment.processPayment(75000.0
+            payment.processPayment(75000.0)
         }
 
 
