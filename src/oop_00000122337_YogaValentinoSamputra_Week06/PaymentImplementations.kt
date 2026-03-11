@@ -1,4 +1,9 @@
 package oop_00000122337_YogaValentinoSamputra_Week06
 
-class PaymentImplementations {
+class Gopay : PaymentMethod {
+    override fun pay(amount: Double) {println("Processing Rp$amount via Gopay Server") }
+}
+
+class CreditCard : PaymentMethod{
+    override fun pay (amount: Double){println("Contacting Bank for Rp$amount") }
 }
