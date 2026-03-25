@@ -1,4 +1,5 @@
 package oop_00000122337_YogaValentinoSamputra_Week07
 
-class Main {
+fun main ( ) {
+    val client = NetworkClient("https://api.umn.ac.id")
 }
