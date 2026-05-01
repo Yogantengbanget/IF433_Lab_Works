@@ -11,9 +11,9 @@ class WalletRepository<T> {
     fun getAll() : List<T>{
         return items
     }
+
+    fun search(predicate: (T) -> Boolean): List<T> {
+        return items.filter(predicate)
+    }
 }
 
-data class ApiResponse<T>(
-    val status: String,
-    val data: T
-)
