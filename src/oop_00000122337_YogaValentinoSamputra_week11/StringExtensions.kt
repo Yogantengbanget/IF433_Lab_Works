@@ -1,7 +1,7 @@
 package oop_00000122337_YogaValentinoSamputra_week11
 
 fun String.addGreeting(): String{
-    return "Hellom $this"
+    return "Hello $this"
 }
 
 fun String.repeatTimes(n: Int): String{

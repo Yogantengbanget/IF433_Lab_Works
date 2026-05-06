@@ -1,4 +1,10 @@
 package oop_00000122337_YogaValentinoSamputra_week11
 
-class Main {
+fun main(){
+    println("=== TEST EXTENSION FUNCTIONS ===")
+    println("Alex".addGreeting())
+    println("Hi".repeatTimes(3))
+
+    val text: String? = null
+    println("Apakah null/empty? ${text.isNullOrEmptyCustom()}")
 }
