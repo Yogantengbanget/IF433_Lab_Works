@@ -10,7 +10,7 @@ class FoodEmptyException(
 )
 
 class DispenserJamException :
-    FeederException("Wadah dispenser tersangkut/macet!"){
+    FeederException("Wadah dispenser tersangkut/macet!") {
     fun dispenseKibble(
         requestedGram: Int,
         availableGram: Int,
@@ -33,30 +33,33 @@ class DispenserJamException :
 
         return availableGram - requestedGram
     }
-    fun main() {
+}
 
-        var currentKibbleStock = 50
+fun main() {
 
-        try {
+    var currentKibbleStock = 50
 
-            dispenseKibble(
-                requestedGram = 80,
-                availableGram = currentKibbleStock,
-                isJammed = false
-            )
+    try {
+        dispenseKibble(
+            requestedGram = 80,
+            availableGram = currentKibbleStock,
+            isJammed = false
+        )
 
-        } catch (e: DispenserJamException) {
+    } catch (e: DispenserJamException) {
 
-            println("Error Dispenser: ${e.message}")
+        println("Error Dispenser: ${e.message}")
 
-        } catch (e: FoodEmptyException) {
+    } catch (e: FoodEmptyException) {
 
-            println("Error Stok: ${e.message}")
+        println("Error Stok: ${e.message}")
 
-        } catch (e: Exception) {
+    } catch (e: Exception) {
 
-            println("General Error: ${e.message}")
-        }
+        println("General Error: ${e.message}")
+
+    } finally {
+
+        println("Siklus pengecekan dispenser pagi selesai.")
     }
-
 }
