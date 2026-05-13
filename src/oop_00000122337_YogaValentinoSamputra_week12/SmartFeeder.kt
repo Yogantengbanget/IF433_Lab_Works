@@ -1,4 +1,4 @@
-package oop_00000122337_YogaValentinoSamputra.week12
+package oop_00000122337_YogaValentinoSamputra_week12
 
 fun dispenseKibble(
     requestedGram: Int,
@@ -10,15 +10,5 @@ fun dispenseKibble(
         "Porsi kibble harus lebih dari 0 gr"
     }
 
-    if (isJammed) {
-        throw DispenserJamException()
-    }
-
-    if (requestedGram > availableGram) {
-        throw FoodEmptyException(requestedGram, availableGram)
-    }
-
-    println("Kibble berhasil dikeluarkan!")
-
-    return availableGram - requestedGram
+    return availableGram
 }
