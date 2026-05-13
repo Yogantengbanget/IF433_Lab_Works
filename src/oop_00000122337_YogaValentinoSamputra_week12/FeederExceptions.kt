@@ -33,4 +33,9 @@ class DispenserJamException :
 
         return availableGram - requestedGram
     }
+    fun main() {
+
+        var currentKibbleStock = 50
+    }
+
 }
