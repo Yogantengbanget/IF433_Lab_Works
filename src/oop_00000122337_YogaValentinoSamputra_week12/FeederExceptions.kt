@@ -1,4 +1,13 @@
 package oop_00000122337_YogaValentinoSamputra_week12
 
-class FeederExceptions {
-}
+sealed class FeederException(msg: String) : Exception(msg)
+
+class FoodEmptyException(
+    requested: Int,
+    available: Int
+) : FeederException(
+    "Kibble tidak cukup! Diminta $requested gr, sisa $available gr"
+)
+
+class DispenserJamException :
+    FeederException("Wadah dispenser tersangkut/macet!")
