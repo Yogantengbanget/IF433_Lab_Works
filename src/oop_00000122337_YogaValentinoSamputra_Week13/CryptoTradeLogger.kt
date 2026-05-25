@@ -106,7 +106,13 @@ fun main() {
         it.pnl
     }
 
+    println("\n=== VALID TRADE RECORDS ===")
 
+    loadedData.forEach {
+        println(it)
+    }
+
+    println("\n==== TOTAL PnL BERSIH: $totalPnl ====")
 
 }
 
