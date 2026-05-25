@@ -33,3 +33,49 @@ class BadOrderProcessor {
         )
     }
 }
+
+interface OrderRepository {
+
+    fun saveOrder(
+        itemName: String,
+        price: Double
+    )
+}
+
+class CsvOrderRepository(
+    private val fileName: String
+) : OrderRepository {
+
+    override fun saveOrder(
+        itemName: String,
+        price: Double
+    ) {
+
+        File(fileName)
+            .printWriter()
+            .use { writer ->
+
+                writer.println("$itemName,$price")
+            }
+    }
+}
+
+interface NotificationService {
+
+    fun sendNotification(message: String)
+}
+
+class EmailNotifier : NotificationService {
+
+    override fun sendNotification(
+        message: String
+    ) {
+
+        println("EMAIL: $message")
+    }
+}
+
+class SafeOrderProcessor(
+    private val repo: OrderRepository,
+    private val notifier: NotificationService
+)
